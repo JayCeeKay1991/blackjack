@@ -169,7 +169,7 @@ const dealerServes = function () {
     }
   }
   // show the back side of the second dealer card
-  cardDealer2.attr("src", "back.png").removeClass("hidden");
+  cardDealer2.attr("src", "Images/back.png").removeClass("hidden");
 
   // Update the (displayed) scores
   scoreDealerElem.text(scoreDealer);
