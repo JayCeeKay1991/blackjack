@@ -112,7 +112,7 @@ const pickCard = function (deck) {
   // picking a random image from the card deck and returning an object with file name and value
   const index = Math.floor(Math.random() * deck.length);
   return {
-    cardImage: `${deck[index].name}.png`,
+    cardImage: `Images/${deck[index].name}.png`,
     cardValue: deck[index].value,
   };
 };
