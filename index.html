@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Black Jack</title>
+  </head>
+  <body>
+    <section>
+      <img src="coins.png" alt="Coins" class="coins coins--fly" />
+    </section>
+    <section>
+      <img src="coins-piles.png" alt="Coins" class="coins coins--piles" />
+    </section>
+
+    <main class="app hidden">
+      <section class="dealer">
+        <img src="arch_white.png" alt="Arch" class="arch" />
+        <h2 class="name name--dealer">Dealer</h2>
+        <img
+          src="ace_of_clubs.png"
+          alt="Card"
+          class="card card--dealer card--dealer1"
+        />
+        <img
+          src="back.png"
+          alt="Card"
+          class="card card--dealer card--dealer2"
+        />
+        <p class="score score--dealer">17</p>
+      </section>
+
+      <section class="player active">
+        <h2 class="name name--player">Player</h2>
+        <p class="score score--player">21</p>
+      </section>
+
+      <img
+        src="2_of_clubs.png"
+        alt="Card Init 1"
+        class="card card--player card--init1"
+      />
+      <img
+        src="2_of_diamonds.png"
+        alt="Card Init 1"
+        class="card card--player card--init2"
+      />
+      <img
+        src="2_of_hearts.png"
+        alt="Card"
+        class="card card--player card--current"
+      />
+      <button class="button btn--hit">♠️ HIT</button>
+      <button class="button btn--stand">🛑 STAND</button>
+      <button class="button btn--modal">❓</button>
+      <div class="modal hidden">
+        <button class="btn--close-modal">✖️</button>
+        <h1>Do you need help? 😍</h1>
+        <p>
+          The goal of the game is to beat the dealer by having a hand value as
+          close to 21 as possible without exceeding it.
+          <br /><br />
+          Number cards (2-10) are worth their face value, face cards (Jack,
+          Queen, King) are worth 10, and Aces can be worth 1 or 11, depending on
+          your hand. Aces automatically take the value that benefits your hand
+          the most, so they will default to 1 if choosing 11 would cause you to
+          bust.
+          <br /><br />
+          The game begins with the dealer serving two initial cards to both the
+          player and themselves. You won't see the dealer's second card
+          initially.
+          <br /><br />
+          You choose to 'Hit' to receive another card or 'Stand' to keep your
+          current hand. It is the dealer's turn when you stand.
+          <br /><br />
+          You win the game if your hand value is closer to 21 than the dealer's,
+          without going over 21. If your hand value equals 21, you win
+          immediately. You lose if your hand value exceeds 21 or if the dealer's
+          hand is closer to 21 than yours.
+          <br /><br />
+          It can also be a tie if your hand has the same value as the dealer's
+          hand.
+          <br /><br />
+          Have fun and good luck! ♥️
+        </p>
+      </div>
+    </main>
+    <section>
+      <button class="button btn--new hidden">⭐️ NEW GAME</button>
+    </section>
+
+    <div class="start">
+      <p class="welcome">Who is playing?</p>
+      <form class="input">
+        <input type="text" placeholder="name" class="input--player" />
+        <button class="button btn--player">⭐️</button>
+      </form>
+    </div>
+
+    <div class="banner">
+      <p class="banner--won hidden">🎉 Black Jack! 🎉</p>
+      <p class="banner--lost hidden">❌ The dealer wins ❌</p>
+      <p class="banner--tie hidden">🎀 It's a tie 🎀</p>
+    </div>
+
+    <div class="timer hidden">Dealer serves in 3 seconds...</div>
+
+    <script src="jquery.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
